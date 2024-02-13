@@ -1,0 +1,218 @@
+.auth {
+  width: 540px;
+  max-width: calc(100% - 40px);
+  margin: 30px auto 60px;
+  padding: 32px 40px;
+  border-radius: 12px;
+  background-color: $auth-background;
+
+  .logo {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid $primary-4;
+
+    &__img {
+      display: inline-block;
+      width: 160px;
+      height: 36px;
+    }
+  }
+
+  &__content {
+    padding-top: 48px;
+  }
+
+  &__title {
+    @include font-set(H-xs);
+    word-break: keep-all;
+  }
+
+  &__login {
+    width: 100%;
+    margin: 48px 0 16px;
+
+    &-item {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+
+      &--addr {
+        margin-top: 32px;
+        padding-top: 32px;
+        border-top: 1px solid $primary-4;
+      }
+    }
+
+    &-title {
+      @include font-set(B-l);
+
+      margin-bottom: 14px;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    &-post {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .c-input {
+        width: 60%;
+      }
+    }
+
+    &-input-group {
+      .c-input {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  &__btn-post {
+    margin-left: 2%;
+    width: 38%;
+  }
+
+
+  &__find {
+    @include font-set(B-m);
+
+    position: absolute;
+    top: 2px;
+    right: 0;
+    font-weight: 400;
+
+    &, &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__notice {
+    &:first-of-type {
+      margin: 48px 0 16px;
+    }
+
+    &-title,
+    &-text {
+      @include font-set(B-l);
+
+      text-align: justify;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    
+    .point {
+	    color: $main-blue2;
+	  }
+  }
+  
+  &__terms {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid $primary-4;
+
+    &-all {
+      span {
+        @include font-set(B-l);
+
+        margin-left: 6px;
+        font-weight: 700;
+      }
+    }
+
+    &-list {
+      margin-top: 16px;
+
+      .c-checkbox {
+        padding-left: 28px;
+      }
+
+      .c-checkbox:not(:last-of-type) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-item {
+      position: relative;
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+
+    &-btn {
+      @include font-set(B-m);
+
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $main-blue;
+      text-decoration: underline;
+
+      .ico {
+        width: auto;
+        height: auto;
+        margin-left: 4px;
+      }
+    }
+
+    &-error {
+      @include font-set(B-m);
+
+      margin: 24px 0 0 24px;
+      color: var(--red);
+    }
+  }
+
+  &__btn-wrap {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid $primary-4;
+  }
+
+  &__btn-login {
+    width: 100%;
+  }
+
+  &__init {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+
+    &-text {
+      @include font-set(B-m);
+    }
+
+    &-link {
+      @include font-set(B-m);
+
+      &:not(:first-child){
+        margin-left: 10px;
+      }
+      text-decoration: underline;
+
+      &,
+      &:hover,
+      &:active,
+      &:visited {
+        color: $main-blue;
+        text-decoration: underline;
+      }
+
+      &--red{
+        &,
+        &:hover,
+        &:active,
+        &:visited {
+          color: $red;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.ico {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: no-repeat 50% 50%;
+  background-size: contain;
+  font-size: 0;
+  vertical-align: middle;
+
+  // icon name
+  &--set {
+    background-image: url(../images/common/icon-set.svg);
+  }
+
+  &--logout {
+    background-image: url(../images/common/icon-logout.svg);
+  }
+
+  &--pw-hide {
+    opacity: .6;
+  }
+
+  &--pw-show {
+    display: none;
+    opacity: .9;
+  }
+
+  // icon color
+  .white {
+    fill: #fff;
+    transition: .4s;
+  }
+  .primary {
+    fill: $main-blue;
+  }
+
+  .checkboxBg {
+    fill: $checkbox-bg;
+    stroke: $checkbox-border;
+  }
+
+  :checked + & .checkboxBg {
+    fill: $main-blue;
+    stroke: $main-blue;
+  }
+
+  .checkboxChk {
+    stroke: $checkbox-border;
+  }
+
+  :checked + & .checkboxChk {
+    stroke: #fff;
+  }
+}

@@ -1,0 +1,269 @@
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1660px;
+  height:100%;
+  margin: 0 7.4%;
+  padding: 42px 0 44px 0;
+
+  .widget {
+    &__calendar {
+      width: 58%;
+      height: 100%;
+      margin-right: 2%;
+    }
+  }
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%;
+  }
+
+  &__account {
+    &-def {
+      font-size: 0;
+
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+
+    &-name, &-price {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &-name {
+      @include font-set(B-l);
+
+      width: 40px;
+    }
+
+    &-price {
+      width: calc(100% - 40px);
+      font-size: 0;
+      text-align: right;
+      
+      .price, .unit {
+        @include font-set(H-s);
+      }
+      .price {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .account-category {
+    height: 72%;
+  }
+
+  .category-bar {
+    // &-wrap {
+    //   .widget-value {
+    //     @include font-set(B-xl);
+
+    //     width: auto;
+    //     padding-bottom: 12px;
+    //     white-space: nowrap;
+    //     flex-wrap: nowrap;
+
+    //     span {
+    //       display: inline-block;
+    //       font-weight: 500;
+
+    //       &.unit {
+    //         display: inline-block;
+    //         font-weight: 400;
+    //       }
+    //     }
+    //   }
+    // }
+
+    & {
+      display: flex;
+      width: 100%;
+      height: 24px;
+      background-color: $primary-6;
+      border-radius: 4px;
+    }
+
+    &__bar {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: $category-de-1;
+      transform-origin: left center;
+      transition: all .4s ease-out;
+      cursor: default;
+
+      &:not(:last-child) {
+        margin-right: 2px;
+      }
+
+      &:first-child {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &:last-child {
+        border-radius: 0 4px 4px 0;
+      }
+
+      &.cg-food {
+        background: $category-de-1;
+      }
+
+      &.cg-cafe {
+        background: $category-de-2;
+      }
+
+      &.cg-life {
+        background: $category-de-3;
+      }
+
+      &.cg-shop {
+        background: $category-de-4;
+      }
+
+      &.cg-traffic {
+        background: $category-de-5;
+      }
+
+      &.cg-home {
+        background: $category-de-6;
+      }
+
+      &.cg-pharm {
+        background: $category-de-7;
+      }
+
+      &.cg-culture {
+        background: $category-de-8;
+      }
+
+      &.cg-travel {
+        background: $category-de-9;
+      }
+
+      &.cg-study {
+        background: $category-de-10;
+      }
+    }
+
+    &__tooltip {
+      display: none;
+      position: absolute;
+      bottom: -40%;
+      right: 0;
+      width: 100px;
+      border: 1px solid #313e62;
+      border-radius: 5px;
+      background-color: rgb(5 12 36 / 90%);
+      pointer-events: none;
+
+      &-title {
+        @include font-set(B-s);
+
+        display: block;
+        padding: 5px 10px;
+        border-bottom: 1px solid rgb(255 255 255 / 10%);
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      &-list {
+        li {
+          @include font-set(B-s);
+
+          padding: 5px 10px;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+
+    &__bar:hover {
+      .category-bar__tooltip {
+        display: block;
+      }
+    }
+  }
+
+  .category-legend {
+    margin-top: 12px;
+
+    &__item {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 8px;
+      padding-left: 24px;
+      border-bottom: 1px solid $primary-4;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        width: 8px;
+        height: 8px;
+        border-radius: 5px;
+        background: $category-de-1;
+        transform: translateY(-50%);
+      }
+
+      
+      &.cg-food:before {
+        background: $category-de-1;
+      }
+
+      &.cg-cafe:before {
+        background: $category-de-2;
+      }
+
+      &.cg-life:before {
+        background: $category-de-3;
+      }
+
+      &.cg-shop:before {
+        background: $category-de-4;
+      }
+
+      &.cg-traffic:before {
+        background: $category-de-5;
+      }
+
+      &.cg-home:before {
+        background: $category-de-6;
+      }
+
+      &.cg-pharm:before {
+        background: $category-de-7;
+      }
+
+      &.cg-culture:before {
+        background: $category-de-8;
+      }
+
+      &.cg-travel:before {
+        background: $category-de-9;
+      }
+
+      &.cg-study:before {
+        background: $category-de-10;
+      }
+
+      .count {
+        font-weight: 300;
+        opacity: .4;
+      }
+      .price {
+        font-weight: 700;
+      }
+    }
+  }
+}
